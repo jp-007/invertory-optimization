@@ -30,7 +30,7 @@ public class Schedule implements ServletContextListener{
             {
                 public void run()
                 {
-                     System.out.println("Bckground task executed "+new Date());
+                     System.out.println("Background task executed "+new Date());
                      Processor P=new Processor();
                     try {
                            
@@ -45,7 +45,7 @@ public class Schedule implements ServletContextListener{
 
             Timer timer = new Timer();
             long delay = 1000;
-            System.out.println("in run");  
+            System.out.println("Running");  
 
             long intevalPeriod =60 * 1 * 1000; //will suspend thread for 1 minutes
             timer.scheduleAtFixedRate(task, delay, intevalPeriod);
